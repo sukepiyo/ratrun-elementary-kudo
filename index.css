@@ -15,6 +15,7 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   line-height: 1.5;
+  background: #dad2c5;
 }
 h1,
 h2,
@@ -42,6 +43,13 @@ a:hover {
 li {
   list-style: none;
 }
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+main > * {
+  border-bottom: 4px solid #807f7d;
+}
 /* header
 -------------------------------------------------- */
 .header {
@@ -53,6 +61,7 @@ li {
   align-items: center;
   background-color: var(--keyColor);
   color: #fff;
+  z-index: 10;
 }
 .header__siteName {
   font-size: 16px;
@@ -72,11 +81,6 @@ li {
 
 /* footer
 -------------------------------------------------- */
-.testContent {
-  /* ヘッダーとフッターの表示確認のための要素 後ほど削除する*/
-  height: 900px;
-  background-color: var(--bgColor);
-}
 .footer {
   padding: 20px;
   background-color: var(--keyColor);
@@ -86,9 +90,212 @@ li {
   align-items: center;
 }
 .footer__item:nth-of-type(1) {
- width: 60%;
+  width: 60%;
   padding-right: 20px;
 }
 .footer__copyright {
   font-size: 12px;
+}
+
+/* hero
+-------------------------------------------------- */
+.hero {
+  background-color: var(--keyColor);
+  color: #fff;
+  text-align: center;
+  padding: 200px 50px;
+}
+.hero__img {
+  padding-top: 30px;
+  width: 70%;
+}
+.hero__copy {
+  font-size: 18px;
+}
+@media (min-width: 1081px) {
+  .hero {
+    padding: 70px 50px;
+  }
+  .hero__img {
+    width: 40%;
+  }
+  .hero__copy {
+    font-size: 22px;
+  }
+}
+
+/* about
+-------------------------------------------------- */
+.about__img {
+  text-align: center;
+}
+.about__img > img {
+  width: 400px;
+  padding: 50px;
+}
+.about__title {
+  font-size: 32px;
+  text-align: center;
+  padding: 50px 20px;
+  margin-bottom: 8px;
+}
+.profile {
+  padding: 30px;
+  margin: 0 auto 50px;
+  color: var(--keyColor);
+  line-height: 2em;
+  text-align: left;
+}
+.profile__item > * {
+  padding: 1px;
+}
+.profile__heading {
+  width: 120px;
+}
+@media (min-width: 1081px) {
+  .about {
+    display: flex;
+  }
+  #about > * {
+    flex: 1;
+  }
+  .about__img > img {
+    width: 600px;
+  }
+  .profile {
+    width: 70%;
+    margin: 0 auto;
+    background-color: var(--keyColor);
+    color: #fff;
+    border: 4px solid #807f7d;
+  }
+}
+
+/* feature
+-------------------------------------------------- */
+.feature {
+  padding: 50px;
+}
+.feature__title {
+  font-family: "Roboto Condensed";
+  color: #ce5230;
+  margin-bottom: 9px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+}
+.feature__img {
+  text-align: center;
+}
+.feature__img > img {
+  width: 300px;
+}
+.feature__item {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+}
+.feature__item:nth-of-type(even) {
+  flex-direction: column-reverse;
+}
+@media (min-width: 1081px) {
+  .feature {
+    display: flex;
+    flex-direction: row;
+  }
+  .feature__item {
+    width: 33%;
+    padding: 0 20px;
+    justify-content: start;
+  }
+}
+
+/* career
+-------------------------------------------------- */
+.career {
+  padding: 50px 0;
+}
+.career__title {
+  padding: 0 50px;
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+.timeLine {
+  width: 100%;
+  height: 600px;
+  font-size: 12px;
+  background-image: url(./img/time-tree.e774d4e.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: 650px 650px;
+  position: relative;
+}
+.timeLine__item {
+  position: absolute;
+  left: 50%;
+  font-weight: 700;
+}
+.timeLine__item:first-of-type {
+  color: #fe5e6f;
+  top: 30px;
+  margin-left: -175px;
+}
+.timeLine__item:nth-of-type(2) {
+  color: #08a68e;
+  top: 180px;
+  margin-left: 105px;
+}
+.timeLine__item:nth-of-type(3) {
+  color: #93b7c8;
+  top: 325px;
+  margin-left: -175px;
+}
+.timeLine__item:last-of-type {
+  color: #285b6d;
+  top: 480px;
+  margin-left: 105px;
+}
+.career__img {
+  text-align: center;
+}
+.career__img > img {
+  width: 300px;
+  margin: 40px;
+}
+@media (min-width: 1081px) {
+  .career {
+    padding: 50px;
+    display: flex;
+  }
+  .career__title {
+    padding: 0;
+  }
+  .timeLine {
+    width: 600px;
+    height: 800px;
+    font-size: 16px;
+    height: 800px;
+    width: 600px;
+    background-size: 800px 800px;
+  }
+  .timeLine__item:first-of-type {
+    top: 65px;
+    margin-left: -220px;
+  }.timeLine__item:nth-of-type(2) {
+    top: 240px;
+    margin-left: 120px;
+  }
+  .timeLine__item:nth-of-type(3) {
+    top: 425px;
+    margin-left: -220px;
+  }
+  .timeLine__item:last-of-type {
+    top: 620px;
+    margin-left: 120px;
+  }
+  .career__img {
+    display: flex;
+    flex-direction: column;
+  }
 }
